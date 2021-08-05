@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korroboree Video Journal</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/grids/grid.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.css">
+    <link rel="stylesheet" href="assets/fonts/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <a href="" class="trigger"><span></span></a>
+        <div class="circle  crcl card-yellow "></div>
+        <div>
+            <nav class="card-yellow">
+                <ul>
+                    <li><a href="intro.html">Intro</a></li>
+                    <li><a href="seg1.html"><span class="active">Segment 1 </span></a></li>
+                    <li><a href="seg2.html">Segment 2</a></li>
+                    <li><a href="seg3.html">Segment 3</a></li>
+                    <li><a href="seg4.html">Segment 4</a></li>
+                    <li><a href="seg5.html">Segment 5</a></li>
+                    <li><a href="seg6.html">Segment 6</a></li>
+                    <li><a href="seg7.html">Segment 7</a></li>
+                    <li><a href="seg8.html">Segment 8</a></li>
+                    <li><a href="seg9.html">Segment 9</a></li>
+                    <li><a href="seg10.html">Segment 10</a></li>
+                    <li><a href="seg11.html">Segment 11</a></li>
+                    <li><a href="seg12.html">Segment 12</a></li>
+                    <li><a href="seg13.html">Segment 13</a></li>
+                    <li><a href="seg14.html">Segment 14</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="wrapper bg-grey-light que_back">
+
+            <div class="row" align="left">
+                <div class="col logo d_shadow"><img src="assets/images/logo2.png" alt="" width="100%"></div>
+            </div>
+            <div class="row justify-content-center">
+
+                <div class="p_sec">
+                    <div class="progress">
+                        <div class="progress-done" data-done="60">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center midrow">
+
+                <div class="col-lg-1 col-md-1 ">
+
+                    <button class="back bg-grey-dark" id="qe1" disabled >
+                        <i class="txt_wht" id="first" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
+                    </button>
+                    <!-- <button class="back bg-grey-dark txt_wht" id="qe2">
+                        <i class="txt_wht" data-feather="arrow-left-circle"></i>
+                    </button> -->
+
+                </div>
+                <div class="col-lg-7 col-md-7">
+
+                    <div class="que_bg bg-yellow" id="mcq1">
+                        <div class="row">
+                            <div class="que txt-grey-dark">
+                                The media focuses on negative aspects of news because our brain gets easily attracted to
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="opts" id="back">
+                                <div class="row  option1 opt_que " id="opt1" onclick="select()">
+                                    <div class="col-lg-11 col-md-11 allow">Good News</div>
+                                    <div class="col-lg-1 col-md-1">
+                                        <div class="ex wrg1" style="display: none;" aria-disabled="true">
+                                            &#215;
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row option2 opt_que" id="opt2" onclick="select()">
+                                    <div class="col-lg-11 col-md-11 allow"> Bad News</div>
+                                    <div class="col-lg-1 col-md-1">
+                                        <p class="check rht" style="display: none; ">
+                                            &#x2714;
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row option3 opt_que " id="opt3" onclick="select()">
+                                    <div class="col-lg-11 col-md-11 allow"> Unbiased News</div>
+                                    <div class="col-lg-1 col-md-1">
+                                        <p class="ex wrg2" style="display: none;">
+                                            &#215;
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="mcq2" class="que_bg bg-yellow" style="display: none;">
+                        <div class="row">
+                            <div class="que txt-grey-dark">
+                                Your child watches / hears about some disturbing news on TV and asks you about the
+                                incident with a
+                                certain concern or worry. How are you most likely to handle the situation ?
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="opts" id="back">
+                                <div class="row option1 opt_que snqe " id="q2opt1">
+                                    <div class="col-lg-11 col-md-11 allow"> Tell your child to forget about it and not
+                                        worry
+                                        so much.</div>
+                                    <div class="col-lg-1 col-md-1">
+                                        <p class="ex que2_op1_w1" style="display: none;"> &#215;</p>
+                                    </div>
+
+                                </div>
+                                <div class="row option2 opt_que snqe" id="q2opt2">
+                                    <div class="col-lg-11 col-md-11 allow">Tell your child about the two sides of the
+                                        coin and
+                                        focus on the positive aspect of the news.</div>
+                                    <div class="col-lg-1 col-md-1">
+                                        <p class="ex que2_op1_w2" style="display: none;">
+                                            &#215;
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                                <div class=" row option3 opt_que snqe" id="q2opt3">
+                                    <div class="col-lg-11 col-md-11 allow"> Explain how a few news channels focus on
+                                        negativity
+                                        to attract our brains.</div>
+                                    <div class="col-lg-1 col-md-1">
+                                        <p class="que2_op1_rht" style="display: none;">
+                                            &#x2714;
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1" >
+                    <!-- <i data-toggle="tooltip" data-placement="bottom"
+                    title="Please give input"></i> -->
+                    <button type="button" class="next bg-grey-dark" id="qe11" disabled>
+                        <i class="txt_wht allow" id="second" data-feather="arrow-right-circle"  style="cursor:not-allowed;" disabled  data-toggle="tooltip" data-placement="bottom"
+                        title="Please give input"></i>
+                    </button>
+                    <button class="next bg-grey-dark txt_wht" id="qe22"  disabled  style="display: none;"><a href="#0"
+                            class="next_pop">
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i></a>
+
+                        <div class="cd-popup" role="alert">
+                            <div class="cd-popup-container">
+                                <p>Keep moving forward.</p>
+                                <ul class="cd-buttons">
+                                    <li><a href="seg2.html">Yes</a></li>
+                                    <li><a href="index.html">No</a></li>
+                                </ul>
+                                <a href="#0" class="cd-popup-close img-replace">Close</a>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-7 mt-10">
+                    <div class="seg_back bg-grey-dark font_tahoma ">
+                        <center class="seg_clr txt_seg">Segment 1</center>
+                        <center class="txt-yellow txt2_seg">Dealing with the brain’s pre-programmed “Negativity Bias”
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <footer>
+
+                <div class=" crcl card-yellow" style="float:right;  margin-right: 34px;">
+                    <a href="seg2.html">
+                        <i class="txt-grey-dark" data-feather="chevron-down"></i>
+                    </a>
+                </div>
+
+                <div class="crcl card-yellow" style="float: right;  margin-right: 20px;">
+                    <a href="seg1.html">
+                        <i class="txt-grey-dark" data-feather="chevron-up"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/js/pop.js"></script>
+    <script src="assets/js/myscript.js"></script>
+    <script src="assets/grids/js/jquery-3.5.1.slim.js"></script>
+    <script src="assets/grids/js/popper.js"></script>
+    <script src="assets/grids/js/bootstrap.js"></script>
+    <script src="assets/fonts/js/all.js"></script>
+    <script src="assetas/fonts/js/all.min.js"></script>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace()
+    </script>
+
+    <script type="text/javascript">
+        const totalItems = 14;
+        const itemsDone = 8;
+        var percentage = (itemsDone * 100) / totalItems;
+        const $circle = document.querySelector(".bar");
+        $circle.style.transform = `rotate(${45 + (percentage * 1.8)}deg)`;
+        const percentageProgress = document.querySelector(".number");
+        percentageProgress.textContent = `${itemsDone} Documents`;
+    </script>
+    <script>
+        const progress = document.querySelector('.progress-done');
+
+        setTimeout(() => {
+            progress.style.opacity = 1;
+            progress.style.width = progress.getAttribute('data-done') + '%';
+        }, 500)
+
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#opt1').click(function () {
+             
+                // document.getElementById("qe11").title='';
+			    // $("#qe11").attr("data-toggle",'modal');
+
+                $(".wrg1").show();
+                $('#opt1').css('background', '#FEC3C3');
+                
+                             
+            
+            });
+
+            $('#opt3').click(function () {
+                $(".wrg2").show();
+                $('#opt3').css('background', '#FEC3C3');
+            });
+
+            $('#opt4').click(function () {
+                $(".wrg3").show();
+                $('#opt4').css('background', '#FEC3C3');
+                
+
+            });
+        });
+
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#q2opt1').click(function () {
+                $(".que2_op1_w1").show();
+                $('#q2opt1').css('background', '#FEC3C3');
+                $('.que2_op1_rht').show();
+            });
+
+
+            $('#q2opt2').click(function () {
+                $(".que2_op1_w2").show();
+                $('#q2opt2').css('background', '#FEC3C3');
+                $('.que2_op1_rht').show();
+            });
+
+
+            $('#q2opt3').click(function () {
+                $('.que2_op1_rht').show();
+            });
+
+
+            $('#q2opt4').click(function () {
+                $(".que2_op1_w3").show();
+                $('#q2opt4').css('background', '#FEC3C3');
+                $('.que2_op1_rht').show();
+            });
+
+
+
+
+            $('.opt_que').click(function () {
+                $('#qe11').prop('disabled', false);
+                $('#second').css('cursor','pointer');
+                $('#opt2').css('background', '#9EFB87');
+                $('.check').show();
+            });
+
+
+            $('.snqe').click(function () {
+                $('#second2').css('cursor','pointer');
+                $('#q2opt3').css('background', '#9EFB87');
+            });
+
+        });
+    </script>
+  <script>
+    $(document).ready(function () {
+       $("#qe11").click(function () {
+          $('#mcq1').hide();
+          $('#mcq2').show();
+          $('#qe11').show();
+          $('#qe22').show();
+          $('#first').css('cursor','pointer');
+          $('#qe1').prop('disabled', false);
+
+       });
+       $("#qe1").click(function () {
+          $('#mcq2').hide();
+          $('#mcq1').show();
+          $('#qe1').show();
+          $('#qe11').show();
+          $('#first').css('cursor','not-allowed');
+
+       });
+    });
+ </script>
+    <script>
+        var count;
+        count = 0;
+        function select1(x) {
+
+            if (count == 0) {
+
+
+            }
+            count = count + 1;
+        }
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+       //$('[data-toggle="tooltip"]').tooltip();
+        });
+
+        // $(".opt_que").click(function () {
+        //         $('[tooltip]').hide();
+             
+        //     });
+         
+      </script>
+
+<script>
+
+// function choice() {
+
+//     var but2 = document.getElementById("qe11");
+//         if(but2.clicked==true){
+//             // $('#qe1').css('cursor','pointer');
+//             alert("iii")
+//             console.log('hiiii');
+//         }
+    
+
+    // var first = document.getElementById("opt1");
+    // var yes = document.getElementById("second");
+   
+
+    // if (first.clicked == true) {
+    //     yes.style.cursor = "pointer";
+    //     alert("hii");
+    // } else if (no.clicked == true) {
+        
+    // } else {
+    //     box.style.backgroundColor = "purple";
+    // };
+// };
+
+// choice ();
+// </script>
+
+</body>
+
+</html>
