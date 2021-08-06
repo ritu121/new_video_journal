@@ -66,12 +66,9 @@
 
                 <div class="col-lg-1 col-md-1 ">
 
-                    <div class="back bg-grey-dark " id="qe1">
-                        <i class="txt_wht" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
-                    </div>
-                    <div class="back bg-grey-dark txt_wht" id="qe2" style="display: none;">
-                        <i class="txt_wht" data-feather="arrow-left-circle"></i>
-                    </div>
+                    <button class="back bg-grey-dark" id="qe1" disabled >
+                        <i class="txt_wht" id="first" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
+                    </button>
 
                 </div>
                 <div class="col-lg-7 col-md-7">
@@ -114,7 +111,7 @@
                             <div class="que txt-grey-dark">
                                 Think of 3 ways to transcend to a mode of just being and not doing? <br> (Clue:
                                 Meditate)
-
+                                <div id="message" style=" position:absolute; margin-left: 121px; margin-top: 6px;">Please click on input box to write Your response</div>
                             </div>
                         </div>
                         <div class="row justify-content-center">
@@ -133,24 +130,35 @@
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1">
-                    <div class="next bg-grey-dark " id="qe11">
-                        <i class="txt_wht" data-feather="arrow-right-circle"></i>
-                    </div>
-                    <div class="next bg-grey-dark txt_wht" id="qe22" style="display: none;"><a href="#0"
-                            class="next_pop">
-                            <i class="txt_wht" data-feather="arrow-right-circle"></i></a>
+                    <button type="button" class="back bg-grey-dark tools" id="qe11" disabled >
+                        <div class="top hide_tool">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" style="cursor:not-allowed;" ></i>
+                    </button>
+					
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;" disabled>
+
+                        <div class="top">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <a href="#0"class="next_pop">
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
+                        </a>
+
                         <div class="cd-popup" role="alert">
                             <div class="cd-popup-container">
-                                <p>Every human being is a creative work in progress. Time to progress to the next
-                                    segment.</p>
+                                <p>Keep moving forward.</p>
                                 <ul class="cd-buttons">
-                                    <li><a href="seg14.html">Yes</a></li>
+                                    <li><a href="intro.html">Yes</a></li>
                                     <li><a href="index.html">No</a></li>
                                 </ul>
                                 <a href="#0" class="cd-popup-close img-replace">Close</a>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -162,18 +170,20 @@
                 </div>
             </div>
             <footer>
+                <button type="button" onclick='window.location.href="Intro.html"' class=" crcl card-yellow tools" id="btn" style="float:right;  margin-right: 34px;"  disabled>
+                    <div class="left hide_tool_2">
+                        <h3>Input Require</h3>
+                        <i></i>
+                    </div>
+                    <i class="txt-grey-dark btn_tool" style="cursor: not-allowed;" data-feather="chevron-down" ></i>
+                        
+                </button>
 
-                <div class=" crcl card-yellow" style="float: right;  margin-right: 34px;">
-                    <a href="index.html">
-                        <i class="txt-grey-dark" data-feather="chevron-down"></i>
-                    </a>
-                </div>
-
-                <div class="crcl card-yellow" style="float: right;  margin-right: 20px;">
+                <button  type="button" class="crcl card-yellow" style="float: right; margin-right: 20px; ">
                     <a href="seg13.html">
                         <i class="txt-grey-dark" data-feather="chevron-up"></i>
                     </a>
-                </div>
+                </button>
             </footer>
         </div>
 
@@ -191,11 +201,11 @@
                     </div>
                     <div class="modal-body">
                         <div class="input_size">input 1</div>
-                        <textarea name="" id="t1" cols="30" rows="10"></textarea>
+                        <textarea name="" id="t1" cols="30" rows="10" class="snqe"></textarea>
                         <div class="input_size">input 2</div>
-                        <textarea name="" id="t2" cols="30" rows="10"></textarea>
+                        <textarea name="" id="t2" cols="30" rows="10" class="snqe"></textarea>
                         <div class="input_size">input 3</div>
-                        <textarea name="" id="t3" cols="30" rows="10"></textarea>
+                        <textarea name="" id="t3" cols="30" rows="10" class="snqe"></textarea>
                     </div>
                     <div class="modal-footer">
                         <button class="btn btnsave" data-dismiss="modal" onclick="save1(); save2(); save3()">
@@ -230,9 +240,20 @@
     <script src="assets/fonts/js/all.js"></script>
     <script src="assets/fonts/js/all.min.js"></script>
 
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+   
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace()
+    </script>
+
+<script>
+    //When the page has loaded.
+    $("#qe11").click(function(){
+        $('#message').fadeIn('slow', function(){
+           $('#message').delay(5000).fadeOut(); 
+        });
+    });
     </script>
 
     <script type="text/javascript">
@@ -241,97 +262,86 @@
         });
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#opt1').click(function () {
-                $(".wrg1").show();
-                $('#opt1').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-            });
-
-
-            $('#opt2').click(function () {
-                $('#opt2').css('background', '#9EFB87');
-                // $('#opt2').css('box-shadow', '2px 2px 2px 2px #9EFB87');
-                $('.check').show();
-            });
-
-
-            $('#opt3').click(function () {
-                $(".wrg2").show();
-                $('#opt3').css('background', '#FEC3C3');
-                // $('#opt3').css('box-shadow', '2px 2px 2px 2px #FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-            });
-
-            $('#opt4').click(function () {
-                $(".wrg3").show();
-                $('#opt4').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-
-            });
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#opt1').click(function () {
+             
+            $(".wrg1").show();
+            $('#opt1').css('background', '#FEC3C3');
         });
-    </script>
+       
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#q2opt1').click(function () {
-                $(".que2_op1_w1").show();
-                $('#q2opt1').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-
-            });
-
-
-            $('#q2opt2').click(function () {
-                $(".que2_op1_w2").show();
-                $('#q2opt2').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-            });
-
-
-            $('#q2opt3').click(function () {
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-
-            });
-
-
-            $('#q2opt4').click(function () {
-                $(".que2_op1_w3").show();
-                $('#q2opt4').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-
-            });
-
+        $('#opt3').click(function () {
+            $(".wrg2").show();
+            $('#opt3').css('background', '#FEC3C3');
         });
 
-    </script>
+        $('#opt4').click(function () {
+            $(".wrg3").show();
+            $('#opt4').css('background', '#FEC3C3');
+            
 
-    <script>
-        $(document).ready(function () {
-            $("#qe11").click(function () {
-                $('#mcq1').hide();
-                $('#mcq2').show();
-                $('#qe1').hide();
-                $('#qe2').show();
-                $('#qe22').show();
-            });
-            $("#qe2").click(function () {
-                $('#mcq2').hide();
-                $('#mcq1').show();
-                $('#qe1').show();
-                $('#qe11').show();
-                $('#qe22').hide();
-            });
         });
-    </script>
+    });
+
+
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#q2opt1').click(function () {
+            $(".que2_op1_w1").show();
+            $('#q2opt1').css('background', '#FEC3C3');
+        });
+
+
+        $('#q2opt2').click(function () {
+            $(".que2_op1_rht").show();
+            $('#q2opt2').css('background', '#FEC3C3');
+        });
+
+
+        $('.opt_que').click(function () {
+            $('#qe11').prop('disabled', false);
+            $('#second').css('cursor','pointer');
+            $('#opt2').css('background', '#9EFB87');
+            $('.check').show();
+            $(".hide_tool").hide();
+        });
+
+
+        $('.snqe').click(function () {
+            $('.que2_op1_rht').show();
+            $('#second2').css('cursor','pointer');
+            $('#q2opt3').css('background', '#9EFB87');
+            $('#btn').prop('disabled', false);
+            $('.hide_tool_2').hide();
+            $('.top').hide();
+            $('.btn_tool').css('cursor','pointer');
+        });
+
+    });
+</script>
+<script>
+$(document).ready(function () {
+   $("#qe11").click(function () {
+      $('#mcq1').hide();
+      $('#mcq2').show();
+      $('#qe11').hide();
+      $('#qe22').show();
+      $('#first').css('cursor','pointer');
+      $('#qe1').prop('disabled', false);
+
+   });
+   $("#qe1").click(function () {
+      $('#mcq2').hide();
+      $('#mcq1').show();
+      $('#qe11').show();
+      $('#qe22').hide();
+      $('#first').css('cursor','not-allowed');
+
+   });
+});
+</script>
     <script>
         function save1() {
           var a = document.getElementById("t1").value;

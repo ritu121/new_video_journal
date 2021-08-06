@@ -63,13 +63,10 @@
 
                 <div class="col-lg-1 col-md-1 ">
 
-                    <div class="back bg-grey-dark" id="qe1" >
-                        <i class="txt_wht" data-feather="arrow-left-circle" style="cursor:not-allowed;"></i>
-                    </div>
-                    <div class="back bg-grey-dark txt_wht" id="qe2">
-                        <i class="txt_wht" data-feather="arrow-left-circle"></i>
-                    </div>
-
+                    <button class="back bg-grey-dark" id="qe1" disabled >
+                        <i class="txt_wht" id="first" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
+                    </button>
+                    
                 </div>
                 <div class="col-lg-7 col-md-7">
 
@@ -81,7 +78,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                <div class="row  option1 opt_que " id="opt1" onclick="select()">
+                                <div class="row  option1 opt_que " id="opt1" >
                                     <div class="col-lg-11 col-md-11 allow">Good News</div>
                                     <div class="col-lg-1 col-md-1">
                                         <div class="ex wrg1" style="display: none;" aria-disabled="true">
@@ -89,7 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row option2 opt_que" id="opt2" onclick="select()">
+                                <div class="row option2 opt_que" id="opt2">
                                     <div class="col-lg-11 col-md-11 allow"> Bad News</div>
                                     <div class="col-lg-1 col-md-1">
                                         <p class="check rht" style="display: none; ">
@@ -97,7 +94,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="row option3 opt_que " id="opt3" onclick="select()">
+                                <div class="row option3 opt_que " id="opt3" >
                                     <div class="col-lg-11 col-md-11 allow"> Unbiased News</div>
                                     <div class="col-lg-1 col-md-1">
                                         <p class="ex wrg2" style="display: none;">
@@ -120,7 +117,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                <div class="row option1 opt_que " id="q2opt1">
+                                <div class="row option1 opt_que snqe " id="q2opt1">
                                     <div class="col-lg-11 col-md-11 allow"> Tell your child to forget about it and not
                                         worry
                                         so much.</div>
@@ -129,7 +126,7 @@
                                     </div>
 
                                 </div>
-                                <div class="row option2 opt_que  " id="q2opt2">
+                                <div class="row option2 opt_que snqe" id="q2opt2">
                                     <div class="col-lg-11 col-md-11 allow">Tell your child about the two sides of the
                                         coin and
                                         focus on the positive aspect of the news.</div>
@@ -141,7 +138,7 @@
 
 
                                 </div>
-                                <div class=" row option3 opt_que " id="q2opt3">
+                                <div class=" row option3 opt_que snqe" id="q2opt3">
                                     <div class="col-lg-11 col-md-11 allow"> Explain how a few news channels focus on
                                         negativity
                                         to attract our brains.</div>
@@ -155,15 +152,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-1 col-md-1">
+                <div class="col-lg-1 col-md-1" >
+                    <button type="button" class="back bg-grey-dark tools" id="qe11" disabled >
+                        <div class="top hide_tool">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" style="cursor:not-allowed;" ></i>
+                    </button>
+					
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;" disabled>
 
-                    <div class="next bg-grey-dark " id="qe11">
-                        <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" data-toggle="tooltip" data-placement="bottom"
-                        title="Please give input" style="cursor: not-allowed;"></i>
-                    </div>
-                    <div class="next bg-grey-dark txt_wht" id="qe22" style="display: none;"><a href="#0"
-                            class="next_pop">
-                            <i class="txt_wht" data-feather="arrow-right-circle"></i></a>
+                        <div class="top">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <a href="#0"class="next_pop">
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
+                        </a>
 
                         <div class="cd-popup" role="alert">
                             <div class="cd-popup-container">
@@ -175,7 +181,7 @@
                                 <a href="#0" class="cd-popup-close img-replace">Close</a>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
 
             </div>
@@ -190,17 +196,20 @@
             </div>
             <footer>
 
-                <div class=" crcl card-yellow" style="float:right;  margin-right: 34px;">
-                    <a href="seg2.html">
-                        <i class="txt-grey-dark" data-feather="chevron-down"></i>
-                    </a>
-                </div>
+                <button type="button" onclick='window.location.href="seg2.html"' class=" crcl card-yellow tools" id="btn" style="float:right;  margin-right: 34px;"  disabled>
+                    <div class="left hide_tool_2">
+                        <h3>Input Require</h3>
+                        <i></i>
+                    </div>
+                    <i class="txt-grey-dark btn_tool" style="cursor: not-allowed;" data-feather="chevron-down" ></i>
+                        
+                </button>
 
-                <div class="crcl card-yellow" style="float: right;  margin-right: 20px;">
+                <button  type="button" class="crcl card-yellow" style="float: right; margin-right: 20px; ">
                     <a href="seg1.html">
                         <i class="txt-grey-dark" data-feather="chevron-up"></i>
                     </a>
-                </div>
+                </button>
             </footer>
         </div>
     </div>
@@ -246,36 +255,21 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#opt1').click(function () {
+                 
                 $(".wrg1").show();
                 $('#opt1').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-                $('#second').css('cursor','pointer');
-                $('#second').css('tooltip','none');
             });
-
-
-            $('#opt2').click(function () {
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-                $('#second').css('cursor','pointer');
-            });
-
+           
 
             $('#opt3').click(function () {
                 $(".wrg2").show();
                 $('#opt3').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-                $('#second').css('cursor','pointer');
             });
 
             $('#opt4').click(function () {
                 $(".wrg3").show();
                 $('#opt4').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-                $('#second').css('cursor','pointer');
+                
 
             });
         });
@@ -287,42 +281,41 @@
             $('#q2opt1').click(function () {
                 $(".que2_op1_w1").show();
                 $('#q2opt1').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-                $('#second').css('cursor','pointer');
-
             });
 
 
             $('#q2opt2').click(function () {
                 $(".que2_op1_w2").show();
                 $('#q2opt2').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-                $('#second').css('cursor','pointer');
             });
-
-
-            $('#q2opt3').click(function () {
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-                $('#second').css('cursor','pointer');
-                
-            });
-
 
             $('#q2opt4').click(function () {
                 $(".que2_op1_w3").show();
                 $('#q2opt4').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-                $('#second').css('cursor','pointer');
-
-
+                
             });
 
 
-           
+
+
+            $('.opt_que').click(function () {
+                $('#qe11').prop('disabled', false);
+                $('#second').css('cursor','pointer');
+                $('#opt2').css('background', '#9EFB87');
+                $('.check').show();
+                $(".hide_tool").hide();
+            });
+
+
+            $('.snqe').click(function () {
+                $('.que2_op1_rht').show();
+                $('#second2').css('cursor','pointer');
+                $('#q2opt3').css('background', '#9EFB87');
+                $('#btn').prop('disabled', false);
+                $('.hide_tool_2').hide();
+                $('.left').hide();
+                $('.btn_tool').css('cursor','pointer');
+            });
 
         });
     </script>
@@ -331,64 +324,22 @@
        $("#qe11").click(function () {
           $('#mcq1').hide();
           $('#mcq2').show();
-          $('#qe1').hide();
-          $('#qe2').show();
+          $('#qe11').hide();
           $('#qe22').show();
+          $('#first').css('cursor','pointer');
+          $('#qe1').prop('disabled', false);
+
        });
-       $("#qe2").click(function () {
+       $("#qe1").click(function () {
           $('#mcq2').hide();
           $('#mcq1').show();
-          $('#qe1').show();
           $('#qe11').show();
           $('#qe22').hide();
+          $('#first').css('cursor','not-allowed');
 
        });
     });
  </script>
-    <script>
-        var count;
-        count = 0;
-        function select1(x) {
-
-            if (count == 0) {
-
-
-            }
-            count = count + 1;
-        }
-    </script>
-    
-    <script>
-        $(document).ready(function () {
-          $('[data-toggle="tooltip"]').tooltip();
-        });
-
-        // $(".opt_que").click(function () {
-        //         $('[tooltip]').hide();
-             
-        //     });
-         
-      </script>
-
-<script>
-
-function Choice () {
-    var first = document.getElementById("opt1");
-    var yes = document.getElementById("second");
-    // var no = document.getElementById("no");
-
-    if (first.clicked == true) {
-        yes.style.cursor = "pointer";
-        alert("hii");
-    } else if (no.clicked == true) {
-        // box.style.backgroundColor = "green";
-    } else {
-        box.style.backgroundColor = "purple";/
-    };
-};
-
-Choice ();
-</script>
 
 </body>
 

@@ -66,11 +66,9 @@
 
                 <div class="col-lg-1 col-md-1 ">
 
-                    <div class="back bg-grey-dark " id="qe1">
-                        <i class="txt_wht" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
-                    </div>
-                 
-                   
+                    <button class="back bg-grey-dark" id="qe1" disabled >
+                        <i class="txt_wht" id="first" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
+                    </button>
 
                 </div>
                 <div class="col-lg-7 col-md-7">
@@ -83,13 +81,13 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                <div class="row option2 opt_que" id="opt1" onclick="select1(this)">
+                                <div class="row option2 opt_que" id="opt1">
                                     <div class="col-lg-11 col-md-11">To help them perform well in exams</div>
                                     <div class="col-lg-1 col-md-1">
                                         <span class="ex wrg1" style="display: none;" aria-disabled="true">&#215;</span>
                                     </div>
                                 </div>
-                                <div class="row option2 opt_que" id="opt2" onclick="select1(this)">
+                                <div class="row option2 opt_que" id="opt2">
                                     <div class="col-lg-11 col-md-11">To help them lead a purposeful life</div>
                                     <div class="col-lg-1 col-md-1">
                                         <p class="check rht" style="display: none; ">
@@ -97,7 +95,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class=" row option3  opt_que" id="opt3" onclick="select1(this)">
+                                <div class=" row option3  opt_que" id="opt3">
                                     <div class="col-lg-11 col-md-11">To make them excel in specific areas of life </div>
                                     <div class="col-lg-1 col-md-1">
                                         <p class="ex wrg2" style="display: none;">
@@ -112,22 +110,29 @@
                 </div>
                 <div class="col-lg-1 col-md-1">
                    
-                    <div class="next bg-grey-dark txt_wht" id="qe22"><a href="#0"
-                            class="next_pop">
-                            <i class="txt_wht" data-feather="arrow-right-circle"></i></a>
-          
-                        <div class="cd-popup" role="alert">
-                          <div class="cd-popup-container">
-                            <p>Benjamin Franklin said ‘An investment in knowledge pays the best interest’. Let’s take his advice!</p>
-                            <ul class="cd-buttons">
-                              <li><a href="seg13.html">Yes</a></li>
-                              <li><a href="index.html" >No</a></li>
-                            </ul>
-                            <a href="#0" class="cd-popup-close img-replace">Close</a>
-                          </div> <!-- cd-popup-container -->
-                        </div> <!-- cd-popup -->
+                   
+					
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" disabled>
 
-                    </div>
+                        <div class="top">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <a href="#0"class="next_pop">
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
+                        </a>
+
+                        <div class="cd-popup" role="alert">
+                            <div class="cd-popup-container">
+                                <p>Keep moving forward.</p>
+                                <ul class="cd-buttons">
+                                    <li><a href="seg13.html">Yes</a></li>
+                                    <li><a href="index.html">No</a></li>
+                                </ul>
+                                <a href="#0" class="cd-popup-close img-replace">Close</a>
+                            </div>
+                        </div>
+                    </button>
                 </div>
 
             </div>
@@ -140,18 +145,20 @@
                 </div>
             </div>
             <footer>
+                <button type="button" onclick='window.location.href="seg13.html"' class=" crcl card-yellow tools" id="btn" style="float:right;  margin-right: 34px;"  disabled>
+                    <div class="left hide_tool_2">
+                        <h3>Input Require</h3>
+                        <i></i>
+                    </div>
+                    <i class="txt-grey-dark btn_tool" style="cursor: not-allowed;" data-feather="chevron-down" ></i>
+                        
+                </button>
 
-                <div class=" crcl card-yellow" style="float: right;  margin-right: 34px;">
-                    <a href="seg13.html">
-                        <i class="txt-grey-dark" data-feather="chevron-down"></i>
-                    </a>
-                </div>
-
-                <div class="crcl card-yellow" style="float: right;  margin-right: 20px;">
-                    <a href="seg11.html">
+                <button  type="button" class="crcl card-yellow" style="float: right; margin-right: 20px; ">
+                    <a href="seg12.html">
                         <i class="txt-grey-dark" data-feather="chevron-up"></i>
                     </a>
-                </div>
+                </button>
             </footer>
         </div>
     </div>
@@ -183,41 +190,38 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-      $('#opt1').click(function () {
-        $(".wrg1").show();
-        $('#opt1').css('background', '#FEC3C3');
-        $('#opt2').css('background', '#9EFB87');
-        $('.check').show();
-      });
+        $('#opt1').click(function () {
+             
+            $(".wrg1").show();
+            $('#opt1').css('background', '#FEC3C3');
+        });
+       
 
+        $('#opt3').click(function () {
+            $(".wrg2").show();
+            $('#opt3').css('background', '#FEC3C3');
+        });
 
-      $('#opt2').click(function () {
-        $('#opt2').css('background', '#9EFB87');
-        // $('#opt2').css('box-shadow', '2px 2px 2px 2px #9EFB87');
-        $('.check').show();
-      });
+        $('.opt_que').click(function () {
+            $('#qe11').prop('disabled', false);
+            $('#second2').css('cursor','pointer');
+            $('#opt2').css('background', '#9EFB87');
+            $('.check').show();
+            $(".hide_tool").hide();
 
+            $('#second2').css('cursor','pointer');
+            $('#btn').prop('disabled', false);
+            $('.hide_tool_2').hide();
+            $('.top').hide();
+            $('.btn_tool').css('cursor','pointer');
+        });
 
-      $('#opt3').click(function () {
-        $(".wrg2").show();
-        $('#opt3').css('background', '#FEC3C3');
-        // $('#opt3').css('box-shadow', '2px 2px 2px 2px #FEC3C3');
-        $('#opt2').css('background', '#9EFB87');
-        $('.check').show();
-      });
-
-      $('#opt4').click(function () {
-        $(".wrg3").show();
-        $('#opt4').css('background', '#FEC3C3');
-        $('#opt2').css('background', '#9EFB87');
-        $('.check').show();
-
-      });
+        
     });
+  
 
 
-  </script>
-
+</script>
 
     
 

@@ -116,33 +116,34 @@
 
         }
     </script>
-     <script>
-        $(document).ready(function () {
-          var ctrlVideo = document.getElementById("vid_play");
-    
-    
-          $('#playvideo').click(function () {
-            if ($('#playvideo').hasClass("active")) {
-    
-              ctrlVideo.play();
-    
-          
-            } else {
-    
-              ctrlVideo.pause();
-    
-            }
-          });
-    
-    
-        });
-      </script>
-       <script>
-        function myfunction() {
-          document.getElementById("playvideo").style.display="none";
+   <script>
+    $(document).ready(function () {
+      var ctrlVideo = document.getElementById("vid_play");
 
-      }
-    </script>
+
+      $('#playvideo').click(function () {
+        if ($('#playvideo').hasClass("active")) {
+
+          ctrlVideo.play();
+
+          
+          
+        } else {
+
+          ctrlVideo.pause();
+
+        }
+      });
+
+
+    });
+  </script>
+   <script>
+    function myfunction() {
+      document.getElementById("playvideo").style.display="none";
+
+  }
+</script>
     
    
 </body>

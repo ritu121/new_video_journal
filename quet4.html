@@ -66,12 +66,9 @@
 
                 <div class="col-lg-1 col-md-1 ">
 
-                    <div class="back bg-grey-dark " id="qe1">
-                        <i class="txt_wht" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
-                    </div>
-                    <div class="back bg-grey-dark txt_wht" id="qe2" style="display: none;">
-                        <i class="txt_wht" data-feather="arrow-left-circle"></i>
-                    </div>
+                    <button class="back bg-grey-dark" id="qe1" disabled >
+                        <i class="txt_wht" id="first" data-feather="arrow-left-circle" style="cursor: not-allowed;"></i>
+                    </button>
 
                 </div>
                 <div class="col-lg-7 col-md-7">
@@ -133,14 +130,14 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                <div class="row option1 opt_que " id="q2opt1">
+                                <div class="row option1 opt_que snqe" id="q2opt1">
                                     <div class="col-lg-11 col-md-11">Do the homework for your child.</div>
                                     <div class="col-lg-1 col-md-1">
                                         <span class="ex que2_op1_w1" style="display: none;">&#215;</span>
                                     </div>
 
                                 </div>
-                                <div class="row option2 opt_que  " id="q2opt2">
+                                <div class="row option2 opt_que snqe " id="q2opt2">
                                     <div class="col-lg-11 col-md-11">Blame your child for not doing the homework on
                                         time. </div>
                                     <div class="col-lg-1 col-md-1">
@@ -149,14 +146,14 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class=" row option3 opt_que " id="q2opt4">
+                                <div class=" row option3 opt_que  snqe " id="q2opt4">
                                     <div class="col-lg-11 col-md-11">Let your child skip school by giving an excuse.
                                     </div>
                                     <div class="col-lg-1 col-md-1">
-                                        <p class=" ex que2_op1_w3" style="display: none;">&#x2714;</p>
+                                        <p class=" ex que2_op1_w3" style="display: none;">&#215;</p>
                                     </div>
                                 </div>
-                                <div class=" row option3 opt_que " id="q2opt3">
+                                <div class=" row option3 opt_que  snqe " id="q2opt3">
                                     <div class="col-lg-11 col-md-11"> Encourage your child to take responsibility, face
                                         the consequence <br>and learn from the mistake.</div>
                                     <div class="col-lg-1 col-md-1">
@@ -171,15 +168,27 @@
                     </div>
                 </div>
                 <div class="col-lg-1 col-md-1">
-                    <div class="next bg-grey-dark " id="qe11">
-                        <i class="txt_wht" data-feather="arrow-right-circle"></i>
-                    </div>
-                    <div class="next bg-grey-dark txt_wht" id="qe22" style="display: none;"><a href="#0"
-                            class="next_pop">
-                            <i class="txt_wht" data-feather="arrow-right-circle"></i></a>
+                    <button type="button" class="back bg-grey-dark tools" id="qe11" disabled >
+                        <div class="top hide_tool">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" style="cursor:not-allowed;" ></i>
+                    </button>
+					
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;" disabled>
+
+                        <div class="top">
+                            <h3>Input Require</h3>
+                            <i></i>
+                        </div>
+                        <a href="#0"class="next_pop">
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
+                        </a>
+
                         <div class="cd-popup" role="alert">
                             <div class="cd-popup-container">
-                                <p>Stay curious and keep learning and growing.</p>
+                                <p>Keep moving forward.</p>
                                 <ul class="cd-buttons">
                                     <li><a href="seg5.html">Yes</a></li>
                                     <li><a href="index.html">No</a></li>
@@ -187,7 +196,7 @@
                                 <a href="#0" class="cd-popup-close img-replace">Close</a>
                             </div>
                         </div>
-                    </div>
+                    </button>
                 </div>
 
             </div>
@@ -201,18 +210,20 @@
                 </div>
             </div>
             <footer>
+                <button type="button" onclick='window.location.href="seg5.html"' class=" crcl card-yellow tools" id="btn" style="float:right;  margin-right: 34px;"  disabled>
+                    <div class="left hide_tool_2">
+                        <h3>Input Require</h3>
+                        <i></i>
+                    </div>
+                    <i class="txt-grey-dark btn_tool" style="cursor: not-allowed;" data-feather="chevron-down" ></i>
+                        
+                </button>
 
-                <div class=" crcl card-yellow" style="float: right;  margin-right: 34px;">
-                    <a href="seg5.html">
-                        <i class="txt-grey-dark" data-feather="chevron-down"></i>
-                    </a>
-                </div>
-
-                <div class="crcl card-yellow" style="float: right;  margin-right: 20px;">
+                <button  type="button" class="crcl card-yellow" style="float: right; margin-right: 20px; ">
                     <a href="seg4.html">
                         <i class="txt-grey-dark" data-feather="chevron-up"></i>
                     </a>
-                </div>
+                </button>
             </footer>
         </div>
 
@@ -248,101 +259,94 @@
         });
     </script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#opt1').click(function () {
-                $(".wrg1").show();
-                $('#opt1').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-            });
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#opt1').click(function () {
+             
+            $(".wrg1").show();
+            $('#opt1').css('background', '#FEC3C3');
+        });
+       
+
+        $('#opt3').click(function () {
+            $(".wrg2").show();
+            $('#opt3').css('background', '#FEC3C3');
+        });
+
+        $('#opt4').click(function () {
+            $(".wrg3").show();
+            $('#opt4').css('background', '#FEC3C3');
+            
+
+        });
+    });
 
 
-            $('#opt2').click(function () {
-                $('#opt2').css('background', '#9EFB87');
-                // $('#opt2').css('box-shadow', '2px 2px 2px 2px #9EFB87');
-                $('.check').show();
-            });
-
-
-            $('#opt3').click(function () {
-                $(".wrg2").show();
-                $('#opt3').css('background', '#FEC3C3');
-                // $('#opt3').css('box-shadow', '2px 2px 2px 2px #FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-            });
-
-            $('#opt4').click(function () {
-                $(".wrg3").show();
-                $('#opt4').css('background', '#FEC3C3');
-                $('#opt2').css('background', '#9EFB87');
-                $('.check').show();
-
-            });
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#q2opt1').click(function () {
+            $(".que2_op1_w1").show();
+            $('#q2opt1').css('background', '#FEC3C3');
         });
 
 
-    </script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $('#q2opt1').click(function () {
-                $(".que2_op1_w1").show();
-                $('#q2opt1').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-
-            });
-
-
-            $('#q2opt2').click(function () {
-                $(".que2_op1_w2").show();
-                $('#q2opt2').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-            });
-
-
-            $('#q2opt3').click(function () {
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-
-            });
-
-
-            $('#q2opt4').click(function () {
-                $(".que2_op1_w3").show();
-                $('#q2opt4').css('background', '#FEC3C3');
-                $('#q2opt3').css('background', '#9EFB87');
-                $('.que2_op1_rht').show();
-
-            });
-
+        $('#q2opt2').click(function () {
+            $(".que2_op1_w2").show();
+            $('#q2opt2').css('background', '#FEC3C3');
         });
 
-    </script>
-
-
-
-    <script>
-        $(document).ready(function () {
-            $("#qe11").click(function () {
-                $('#mcq1').hide();
-                $('#mcq2').show();
-                $('#qe1').hide();
-                $('#qe2').show();
-                $('#qe22').show();
-            });
-            $("#qe2").click(function () {
-                $('#mcq2').hide();
-                $('#mcq1').show();
-                $('#qe1').show();
-                $('#qe11').show();
-                $('#qe22').hide();
-            });
+        $('#q2opt4').click(function () {
+            $(".que2_op1_w3").show();
+            $('#q2opt4').css('background', '#FEC3C3');
+            
         });
-    </script>
+
+
+
+
+        $('.opt_que').click(function () {
+            $('#qe11').prop('disabled', false);
+            $('#second').css('cursor','pointer');
+            $('#opt2').css('background', '#9EFB87');
+            $('.check').show();
+            $(".hide_tool").hide();
+        });
+
+
+        $('.snqe').click(function () {
+            $('.que2_op1_rht').show();
+            $('#second2').css('cursor','pointer');
+            $('#q2opt3').css('background', '#9EFB87');
+            $('#btn').prop('disabled', false);
+            $('.hide_tool_2').hide();
+            $('.top').hide();
+            $('.btn_tool').css('cursor','pointer');
+        });
+
+    });
+</script>
+<script>
+$(document).ready(function () {
+   $("#qe11").click(function () {
+      $('#mcq1').hide();
+      $('#mcq2').show();
+      $('#qe11').hide();
+      $('#qe22').show();
+      $('#first').css('cursor','pointer');
+      $('#qe1').prop('disabled', false);
+
+   });
+   $("#qe1").click(function () {
+      $('#mcq2').hide();
+      $('#mcq1').show();
+      $('#qe11').show();
+      $('#qe22').hide();
+      $('#first').css('cursor','not-allowed');
+
+   });
+});
+</script>
     <script>
         const progress = document.querySelector('.progress-done');
 

@@ -93,7 +93,7 @@
     .back {
         width: 80px;
         height: 80px;
-        margin-left: 131px;
+        /* margin-left: 131px; */
         margin-top: 22rem;
     }
     
@@ -212,13 +212,17 @@
         font-size: 25px;
     } 
     .rick_back img {
-        width: 36rem;
+        width: 33rem;
         margin-top: 30px;
     }
     .rick_back {
-        height: 45rem;
+        height: 42rem;
         width: 42rem;
         margin-top: 40px;
+    }
+    .p_sec {
+        padding-bottom: 8px;
+        margin-top: 0px;
     }
     .midrow {
         height: 38rem;
@@ -227,7 +231,7 @@
         height: 39.7rem;
     }
     .introd {
-        height: 45rem;
+        height: 42rem;
         width: 63rem;
         margin-top: 40px;
     }
@@ -444,7 +448,7 @@
         width: 52px;
         height: 52px;
         margin-top: 17rem;
-        margin-left: 80px;
+      
     }
     .next{
         width: 52px;
