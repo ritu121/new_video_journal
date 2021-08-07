@@ -153,20 +153,20 @@
                 <div class="col-lg-1 col-md-1">
                     <button type="button" class="back bg-grey-dark tools" id="qe11" disabled >
                         <div class="top hide_tool">
-                            <h3>Input Require</h3>
+                            <h3>Input required</h3>
                             <i></i>
                         </div>
                         <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" style="cursor:not-allowed;" ></i>
                     </button>
 					
-                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;" disabled>
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none; cursor:not-allowed;" >
 
                         <div class="top">
-                            <h3>Input Require</h3>
+                            <h3>Input required</h3>
                             <i></i>
                         </div>
-                        <a href="#0"class="next_pop">
-                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
+                        <a href="#0"class="next_pop"  style="pointer-events:none;" >
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2"></i>
                         </a>
 
                         <div class="cd-popup" role="alert">
@@ -194,7 +194,7 @@
             <footer>
                 <button type="button" onclick='window.location.href="seg8.html"' class=" crcl card-yellow tools" id="btn" style="float:right;  margin-right: 34px;"  disabled>
                     <div class="left hide_tool_2">
-                        <h3>Input Require</h3>
+                        <h3>Input required</h3>
                         <i></i>
                     </div>
                     <i class="txt-grey-dark btn_tool" style="cursor: not-allowed;" data-feather="chevron-down" ></i>
@@ -297,6 +297,7 @@
             $('.hide_tool_2').hide();
             $('.top').hide();
             $('.btn_tool').css('cursor','pointer');
+            $('.next_pop').css('pointer-events','visible');
         });
 
     });

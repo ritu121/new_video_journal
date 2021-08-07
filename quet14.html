@@ -111,19 +111,22 @@
                             <div class="que txt-grey-dark">
                                 Think of 3 ways to transcend to a mode of just being and not doing? <br> (Clue:
                                 Meditate)
-                                <div id="message" style=" position:absolute; margin-left: 121px; margin-top: 6px;">Please click on input box to write Your response</div>
+                               
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                <a href="#costumModal1" class="btn btn-default  option1 opt_que_input" data-toggle="modal">
-                                    <div id="r1"></div>
+                                <a href="#costumModal1" data-toggle="modal">
+                                    <textarea type="text" name="" id="r1" placeholder="Click here to write your response"
+                                        class="btn btn-default  option1 opt_que_input"></textarea>
                                 </a>
-                                <a href="#costumModal1" class="btn btn-default  option1 opt_que_input" data-toggle="modal">
-                                    <div id="r2"></div>
+                                <a href="#costumModal1" data-toggle="modal">
+                                    <textarea type="text" name="" id="r2" placeholder="Click here to write your response"
+                                        class="btn btn-default  option1 opt_que_input"></textarea>
                                 </a>
-                                <a href="#costumModal1" class="btn btn-default  option1 opt_que_input" data-toggle="modal">
-                                    <div id="r3"></div>
+                                <a href="#costumModal1" data-toggle="modal">
+                                    <textarea type="text" name="" id="r3" placeholder="Click here to write your response"
+                                        class="btn btn-default  option1 opt_que_input"></textarea>
                                 </a>
                             </div>
                         </div>
@@ -138,14 +141,14 @@
                         <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" style="cursor:not-allowed;" ></i>
                     </button>
 					
-                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;" disabled>
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;cursor:not-allowed;">
 
                         <div class="top">
                             <h3>Input Require</h3>
                             <i></i>
                         </div>
-                        <a href="#0"class="next_pop">
-                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
+                        <a href="#0"class="next_pop"  style="pointer-events:none;">
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" ></i>
                         </a>
 
                         <div class="cd-popup" role="alert">
@@ -190,32 +193,35 @@
         <div id="costumModal1" class="modal" data-easein="flipXIn" tabindex="-1" role="dialog"
             aria-labelledby="costumModalLabel" aria-hidden="true">
             <div class="modal-dialog model_top_90">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                            ×
-                        </button>
-                        <h4 class="modal-title">
-
-                        </h4>
+                <center>
+                    <div class="modal-content modal_body">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                ×
+                            </button>
+                            <h4 class="modal-title">
+    
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="hint" style="color:rgb(243, 7, 7);"></div>
+                            <div class="input_size">input 1</div>
+                            <textarea name="" id="t1" maxlength="200" rows="6" cols="70"  class="snqe opt_que"></textarea>
+                            <div class="input_size">input 2</div>
+                            <textarea name="" id="t2" maxlength="200" rows="6" cols="70"  class="snqe opt_que"></textarea>
+                            <div class="input_size">input 3</div>
+                            <textarea name="" id="t3" maxlength="200" rows="6" cols="70"  class="snqe opt_que"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btnsave" data-dismiss="modal" onclick="save1(); save2(); save3()">
+                                Save
+                            </button>
+                            <button class="btn btnclose" data-dismiss="modal" aria-hidden="true">
+                                Close
+                            </button>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <div class="input_size">input 1</div>
-                        <textarea name="" id="t1" cols="30" rows="10" class="snqe"></textarea>
-                        <div class="input_size">input 2</div>
-                        <textarea name="" id="t2" cols="30" rows="10" class="snqe"></textarea>
-                        <div class="input_size">input 3</div>
-                        <textarea name="" id="t3" cols="30" rows="10" class="snqe"></textarea>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btnsave" data-dismiss="modal" onclick="save1(); save2(); save3()">
-                            Save
-                        </button>
-                        <button class="btn btnclose" data-dismiss="modal" aria-hidden="true">
-                            Close
-                        </button>
-                    </div>
-                </div>
+                </center>
             </div>
         </div>
 
@@ -239,22 +245,13 @@
     <script src="assets/grids/js/bootstrap.js"></script>
     <script src="assets/fonts/js/all.js"></script>
     <script src="assets/fonts/js/all.min.js"></script>
-
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
    
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace()
     </script>
 
-<script>
-    //When the page has loaded.
-    $("#qe11").click(function(){
-        $('#message').fadeIn('slow', function(){
-           $('#message').delay(5000).fadeOut(); 
-        });
-    });
-    </script>
+
 
     <script type="text/javascript">
         $(".but").click(function () {
@@ -317,6 +314,7 @@
             $('.hide_tool_2').hide();
             $('.top').hide();
             $('.btn_tool').css('cursor','pointer');
+            $('.next_pop').css('pointer-events','visible');
         });
 
     });
@@ -346,19 +344,19 @@ $(document).ready(function () {
         function save1() {
           var a = document.getElementById("t1").value;
     
-          document.getElementById("r1").innerHTML = a;
+          document.getElementById("r1").value = a;
     
         }
         function save2() {
           var a = document.getElementById("t2").value;
     
-          document.getElementById("r2").innerHTML = a;
+          document.getElementById("r2").value = a;
     
         }
         function save3() {
           var a = document.getElementById("t3").value;
     
-          document.getElementById("r3").innerHTML = a;
+          document.getElementById("r3").value = a;
     
         }
     
@@ -376,6 +374,20 @@ $(document).ready(function () {
 
 
     </script>
+
+<script>
+    $('textarea#t1,textarea#t2,textarea#t3').on('keyup', function () {
+        var maxlen = $(this).attr('maxlength');
+
+        var length = $(this).val().length;
+        if (length > (maxlen - 10)) {
+            $('#hint').text('max length ' + maxlen + ' characters only!')
+        }
+        else {
+            $('#t1,#t2,#t3').text('');
+        }
+    });
+</script>
 
 
 </body>

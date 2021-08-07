@@ -109,20 +109,19 @@
                         <div class="row">
                             <div class="que txt-grey-dark">
                                 List 2 ways to strengthen your child’s inner resources for him / her to deal with gain and loss, pleasure and pain, praise. 
-                                <div id="message" style=" position:absolute; margin-left: 121px; margin-top: 6px;">Please click on input box to write Your response</div>
-                          
+                               
                             </div>
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                    <a href="#costumModal1" class="btn btn-default  option1 opt_que_input"
-                                        data-toggle="modal">
-                                        <div id="r1"></div>
+                                    <a href="#costumModal1" data-toggle="modal">
+                                        <textarea type="text" name="" id="r1" placeholder="Click here to write your response"
+                                        class="btn btn-default  option1 opt_que_input"></textarea>
                                     </a>
 
-                                    <a href="#costumModal1" class="btn btn-default  option1 opt_que_input"
-                                        data-toggle="modal">
-                                        <div id="r2"></div>
+                                    <a href="#costumModal1" data-toggle="modal">
+                                        <textarea type="text" name="" id="r2" placeholder="Click here to write your response"
+                                        class="btn btn-default  option1 opt_que_input"></textarea>
                                     </a>
                             </div>
                         </div>
@@ -131,19 +130,19 @@
                 <div class="col-lg-1 col-md-1">
                     <button type="button" class="back bg-grey-dark tools" id="qe11" disabled >
                         <div class="top hide_tool">
-                            <h3>Input Require</h3>
+                            <h3>Input required </h3>
                             <i></i>
                         </div>
                         <i class="txt_wht allow" id="second" data-feather="arrow-right-circle" style="cursor:not-allowed;" ></i>
                     </button>
 					
-                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none;" disabled>
+                    <button type="button" class="next bg-grey-dark txt_wht tools" id="qe22" style="display: none; cursor:not-allowed;">
 
                         <div class="top">
-                            <h3>Input Require</h3>
+                            <h3>Input required </h3>
                             <i></i>
                         </div>
-                        <a href="#0"class="next_pop">
+                        <a href="#0"class="next_pop"  style="pointer-events:none;">
                             <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;"></i>
                         </a>
 
@@ -172,7 +171,7 @@
             <footer>
                 <button type="button" onclick='window.location.href="seg12.html"' class=" crcl card-yellow tools" id="btn" style="float:right;  margin-right: 34px;"  disabled>
                     <div class="left hide_tool_2">
-                        <h3>Input Require</h3>
+                        <h3>Input required </h3>
                         <i></i>
                     </div>
                     <i class="txt-grey-dark btn_tool" style="cursor: not-allowed;" data-feather="chevron-down" ></i>
@@ -190,7 +189,8 @@
         <div id="costumModal1" class="modal" data-easein="flipXIn" tabindex="-1" role="dialog"
             aria-labelledby="costumModalLabel" aria-hidden="true">
             <div class="modal-dialog model_top">
-                <div class="modal-content">
+               <center>
+                <div class="modal-content modal_body">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                             ×
@@ -200,10 +200,11 @@
                         </h4>
                     </div>
                     <div class="modal-body">
+                        <div id="hint" style="color:rgb(243, 7, 7);"></div>
                         <div class="input_size"> input 1</div>
-                        <textarea name="" id="t1" cols="30" rows="10" class="snqe"></textarea>
+                        <textarea name="" id="t1"  maxlength="200" rows="6" cols="70"  class="opt_que snqe"></textarea>
                         <div class="input_size">input 2</div>
-                        <textarea name="" id="t2" cols="30" rows="10" class="snqe"></textarea>
+                        <textarea name="" id="t2" maxlength="200" rows="6" cols="70"  class="opt_que snqe"></textarea>
                     </div>
                     <div class="modal-footer">
 
@@ -215,6 +216,7 @@
                         </button>
                     </div>
                 </div>
+               </center>
             </div>
         </div>
     </div>
@@ -237,21 +239,12 @@
     <script src="assets/grids/js/bootstrap.js"></script>
     <script src="assets/fonts/js/all.js"></script>
     <script src="assets/fonts/js/all.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
    
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
         feather.replace()
     </script>
 
-<script>
-    //When the page has loaded.
-    $("#qe11").click(function(){
-        $('#message').fadeIn('slow', function(){
-           $('#message').delay(5000).fadeOut(); 
-        });
-    });
-    </script>
 
     <script type="text/javascript">
         $(".but").click(function () {
@@ -314,6 +307,7 @@
             $('.hide_tool_2').hide();
             $('.top').hide();
             $('.btn_tool').css('cursor','pointer');
+            $('.next_pop').css('pointer-events','visible');
         });
 
     });
@@ -343,13 +337,13 @@ $(document).ready(function () {
         function save1() {
             var a = document.getElementById("t1").value;
 
-            document.getElementById("r1").innerHTML = a;
+            document.getElementById("r1").value = a;
 
         }
         function save2() {
             var a = document.getElementById("t2").value;
 
-            document.getElementById("r2").innerHTML = a;
+            document.getElementById("r2").value = a;
 
         }
     </script>
@@ -365,6 +359,19 @@ $(document).ready(function () {
         }, 500)
 
 
+    </script>
+      <script>
+        $('textarea#t1,textarea#t2').on('keyup', function () {
+            var maxlen = $(this).attr('maxlength');
+
+            var length = $(this).val().length;
+            if (length > (maxlen - 10)) {
+                $('#hint').text('Max length ' + maxlen + ' characters only!')
+            }
+            else {
+                $('#t1.#t2').text('');
+            }
+        });
     </script>
 
 

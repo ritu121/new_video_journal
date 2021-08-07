@@ -8,6 +8,7 @@
     .rick_back img {
         width: 43rem;
         margin-top: 30px;
+        
     }
     .rick_back {
         height: 54rem;
@@ -157,17 +158,17 @@
     #t1 {
         height: 9rem;
         font-size: 27px;
-        width: 78rem;
+        width: 68rem;
     }
     #t2 {
         height: 9rem;
         font-size: 27px;
-        width: 78rem;
+        width: 68rem;
     }
     #t3 {
         height: 9rem;
         font-size: 27px;
-        width: 78rem;
+        width: 68rem;
     }
     .modal-body {
         border-bottom: 0;
@@ -189,18 +190,36 @@
     .scroll {
         margin: 4px, 4px;
         padding: 7px;
-        width: 75rem;
-        margin-left: 52px;
-        height: 461px;
-        overflow-x: hidden;
-        overflow-y: auto;
-        text-align: justify;
+        width: 73rem;
+        height: 463px;
     }
     .social-icons .fa {
         width: 77px;
         height: 77px;
         line-height: 77px;
     }
+    .modal-content {
+        height: 33rem;
+        width: 74rem;
+    }
+    .modal_body {
+        width: 75rem !important;
+        height: auto !important;
+    }
+    .cards_item {
+        width: 18.3333%;
+        height: 24.5rem;
+    }
+    .cards {
+        grid-gap: 56px;
+    }
+
+.card_title {
+    font-size: 20px;
+}
+.cardbtn {
+    font-size: 15px !important;
+}
 }
 
 
@@ -297,7 +316,7 @@
         margin-top: 21px;
     }
     .opt_que_input {
-        height: 8rem;
+        height: 7rem;
         font-size: 22px;
     }
     .modal-dialog {
