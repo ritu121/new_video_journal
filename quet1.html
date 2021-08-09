@@ -78,7 +78,7 @@
                         </div>
                         <div class="row justify-content-center">
                             <div class="opts" id="back">
-                                <div class="row  option1 opt_que " id="opt1" >
+                                <div class="row  option1 opt_que " id="opt1"   onclick="select1(this)">
                                     <div class="col-lg-11 col-md-11 allow">Good News</div>
                                     <div class="col-lg-1 col-md-1">
                                         <div class="ex wrg1" style="display: none;" aria-disabled="true">
@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row option2 opt_que" id="opt2">
+                                <div class="row option2 opt_que" id="opt2"  onclick="select1(this)">
                                     <div class="col-lg-11 col-md-11 allow"> Bad News</div>
                                     <div class="col-lg-1 col-md-1">
                                         <p class="check rht" style="display: none; ">
@@ -94,7 +94,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="row option3 opt_que " id="opt3" >
+                                <div class="row option3 opt_que " id="opt3"  onclick="select1(this)" >
                                     <div class="col-lg-11 col-md-11 allow"> Unbiased News</div>
                                     <div class="col-lg-1 col-md-1">
                                         <p class="ex wrg2" style="display: none;">
@@ -169,7 +169,7 @@
                         </div>
                         
                         <a href="#0" class="next_pop" style="pointer-events:none; " >
-                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2"></i>
+                            <i class="txt_wht" data-feather="arrow-right-circle" id="second2" style="cursor:not-allowed;" ></i>
                         </a>
 
                         <div class="cd-popup" role="alert">
@@ -318,7 +318,8 @@
                 $('.hide_too').hide();
                 $('.left').hide();
                 $('.next_pop').css('pointer-events','visible');
-               
+                $('.btn_tool').css('cursor','pointer');
+
             });
 
         });
@@ -344,6 +345,18 @@
        });
     });
  </script>
+ <script>
+    var count;
+    count = 0;
+    function select1(x) {
+
+      if (count == 0) {
+        x.style.background = '#9EFB87';
+
+      }
+      count = count + 1;
+    }
+  </script>
 
 </body>
 
