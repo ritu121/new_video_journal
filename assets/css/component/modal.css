@@ -14,9 +14,8 @@ body {
   text-align: left;
 }
 .scroll {
-  margin: 4px, 4px;
   padding: 4px;
-  width: 793px;
+  width: 843px;
   height: 355px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -28,7 +27,7 @@ body {
 
 .modal-content {
   height: 27rem;
-  width: 53rem;
+  width: 55rem;
   border: none !important;
   border-radius: 0px;
   box-shadow: 0 16px 28px 0 rgb(0 0 0 / 22%), 0 25px 55px 0 rgb(0 0 0 / 21%);

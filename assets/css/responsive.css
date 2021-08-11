@@ -206,10 +206,7 @@
         width: 75rem !important;
         height: auto !important;
     }
-    .cards_item {
-        width: 18.3333%;
-        height: 24.5rem;
-    }
+  
     .cards {
         grid-gap: 56px;
     }
@@ -219,6 +216,9 @@
 }
 .cardbtn {
     font-size: 15px !important;
+}
+.cards_item {
+    width: 18.3333% !important;
 }
 }
 
@@ -320,8 +320,8 @@
         font-size: 22px;
     }
     .modal-dialog {
-        margin-top: 270px;
-    } 
+        margin-top: 225px;
+    }
     .back {
         width: 52px;
         height: 52px;
@@ -347,6 +347,7 @@
     }
     .cd-popup-container {
         font-size: 22px;
+        margin: 13em auto;
     }
     #t1 {
         height: 8rem;
@@ -366,7 +367,15 @@
     .input_size {
         font-size: 20px;
     }
-   
+    .modal-content {
+        height: 26rem;
+        width: 56rem;
+    }
+    .scroll {
+        padding: 4px;
+        width: 878px;
+        height: 353px;
+    }
     
 }
 

@@ -331,7 +331,7 @@ bottom: -20px;
   font-family:  Tahoma;
   
 }
-.opt_que_input::-webkit-scrollbar { width: 0 !important }
+
 
 .check {
   color: green;
@@ -448,7 +448,6 @@ bottom: -20px;
 .tools {
   display:inline-block;
   position:relative;
-  border-bottom:1px dotted #666;
   text-align:center;
 }
 
@@ -459,7 +458,7 @@ bottom: -20px;
   transform:translate(-50%, -100%);
   padding:10px 15px;
   color:#141314;
-  background-color:#EEEEEE;
+  background-color:white;
   font-weight:normal;
   font-size:14px;
   border-radius:8px;
@@ -474,7 +473,7 @@ bottom: -20px;
   display:block;
 }
 
-.tools .top span {
+.tools .top i {
   position:absolute;
   top:100%;
   left:50%;
@@ -484,14 +483,14 @@ bottom: -20px;
   overflow:hidden;
 }
 
-.tools .top span::after {
+.tools .top i::after {
   content:'';
   position:absolute;
   width:12px;
   height:12px;
   left:50%;
   transform:translate(-50%,-50%) rotate(45deg);
-  background-color:#EEEEEE;
+  background-color:white;
   box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 
@@ -506,7 +505,7 @@ bottom: -20px;
   transform: translate(0, -50%);
   /* padding: 10px 15px; */
   color: #141314;
-  background-color: #EEEEEE;
+  background-color: white;
   font-weight: normal;
   font-size: 15px;
   border-radius: 8px;
@@ -539,86 +538,9 @@ bottom: -20px;
   left:0;
   top:50%;
   transform:translate(-50%,-50%) rotate(-45deg);
-  background-color:#EEEEEE;
+  background-color:white;
   box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 
 /* card */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards_item {
-  display: flex;
-  padding: 1rem;
-}
-
-@media (min-width: 40rem) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 56rem) {
-  .cards_item {
-    width: 24.3333%;
-    height: 21.5rem;
-}
-}
-
-.card {
-  filter: drop-shadow(1px 3px 2px rgba(43, 41, 41, 0.781));
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.card_content {
-  padding: 1rem;
-
-}
-
-.card_title {
-  color: #000;
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.card_text {
-  color: #000;
-}
-
-.cardbtn {
-  color: #201e1e;
-  padding: 3px;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.cardbtn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
-.card_image img{
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-.card-footer{
-  bottom: 0px;
-
-}
+/*  */
